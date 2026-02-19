@@ -1,0 +1,8 @@
+<div class="nav-links" id="navLinks">
+  {% for item in items %}
+    <a href="{{ item.url }}"
+       class="{{ item.in_active_trail ? 'active' : '' }}">
+       {{ item.title }}
+    </a>
+  {% endfor %}
+</div>

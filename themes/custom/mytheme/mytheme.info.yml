@@ -1,0 +1,13 @@
+name: My Theme
+type: theme
+description: Simple HTML Drupal theme
+core_version_requirement: ^9 || ^10 || ^11
+base theme: stable9
+
+libraries:
+  - mytheme/global-style
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer

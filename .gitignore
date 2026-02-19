@@ -1,0 +1,6 @@
+/vendor/
+/sites/default/files/
+/core/
+/node_modules/
+/.env
+

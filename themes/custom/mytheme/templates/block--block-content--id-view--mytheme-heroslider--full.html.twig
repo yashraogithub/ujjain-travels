@@ -1,0 +1,27 @@
+<section class="hero" id="home">
+
+  {% for image in content.field_hero_images['#items'] %}
+  <div class="hero-slide {{ loop.first ? 'active' }}">
+    <img src="{{ file_url(image.entity.uri.value) }}">
+    <div class="hero-overlay"></div>
+  </div>
+  {% endfor %}
+
+  <div class="hero-content">
+    <h1>{{ content.field_headingg }}</h1>
+    <p>{{ content.field_heading }}</p>
+
+    <div class="hero-buttons">
+      <a href="{{ content.field_btn1_link[0]['#url'] }}"
+         class="btn btn-primary">
+         {{ content.field_button_1_text }}
+      </a>
+
+      <a href="{{ content.field_btn2_link[0]['#url'] }}"
+         class="btn btn-outline">
+         {{ content.field_button_2_text }}
+      </a>
+    </div>
+  </div>
+
+</section>

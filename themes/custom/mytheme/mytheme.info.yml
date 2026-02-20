@@ -9,5 +9,7 @@ libraries:
 
 regions:
   header: Header
+  primary_menu: 'Primary Menu'
+  slider: Slider
   content: Content
   footer: Footer

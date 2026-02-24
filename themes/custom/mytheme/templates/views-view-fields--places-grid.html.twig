@@ -1,0 +1,123 @@
+<style>
+.detail-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.detail-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  width: 600px;
+  max-width: 95%;
+  border-radius: 16px;
+  padding: 25px;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 26px;
+  cursor: pointer;
+}
+</style>
+<div class="place-card"
+     data-title="{{ fields.title.content|striptags }}"
+     data-image="{{ fields.field_imagee.content|striptags }}"
+     data-location="{{ fields.field_location.content|striptags }}"
+     data-description="{{ fields.field_fulldesc.content|striptags }}"
+     data-price="{{ fields.field_price.content|striptags }}"
+     data-rating="{{ fields.field_rating.content|striptags }}"
+     data-timing="{{ fields.field_timing.content|striptags }}"
+     data-highlights="{{ fields.field_highlights.content|striptags }}"
+>
+
+  <div class="place-card-img">
+    {{ fields.field_imagee.content }}
+  </div>
+
+  <div class="place-card-body">
+    <h3>{{ fields.title.content }}</h3>
+    <div class="location">
+      {{ fields.field_location.content }}
+    </div>
+    <p>{{ fields.field_description.content }}</p>
+
+    <div class="place-card-footer">
+      <span class="price">
+        {{ fields.field_price.content }}
+      </span>
+
+      <span class="view-btn">
+        View Details →
+      </span>
+    </div>
+  </div>
+
+</div>
+<div id="detailModal" class="detail-modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <img id="modalImg">
+    <h2 id="modalTitle"></h2>
+    <div id="modalMeta"></div>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+<script>document.addEventListener("DOMContentLoaded", function () {
+
+  const modal = document.getElementById("detailModal");
+  const cards = document.querySelectorAll(".place-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", function () {
+
+      document.getElementById("modalImg").src =
+        this.querySelector("img").src;
+
+      document.getElementById("modalTitle").innerText =
+        this.dataset.title;
+
+      document.getElementById("modalMeta").innerHTML = `
+        <p><strong>Location:</strong> ${this.dataset.location}</p>
+        <p><strong>Timing:</strong> ${this.dataset.timing}</p>
+        <p><strong>Rating:</strong> ${this.dataset.rating}</p>
+        <p><strong>Price:</strong> ${this.dataset.price}</p>
+      `;
+
+      document.getElementById("modalDesc").innerText =
+        this.dataset.description;
+
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  document.querySelector(".close-modal").addEventListener("click", () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+});</script>

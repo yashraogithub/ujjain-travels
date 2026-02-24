@@ -9,5 +9,9 @@ libraries:
 
 regions:
   header: Header
+  primary_menu: 'Primary Menu'
+  slider: Slider
+  destination: Destination
+  about: 'About'
   content: Content
   footer: Footer

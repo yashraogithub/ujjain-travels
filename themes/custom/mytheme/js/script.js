@@ -343,6 +343,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const buttons = document.querySelectorAll(".filter-btn");
@@ -355,6 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchValue = searchInput.value.toLowerCase();
 
     cards.forEach(card => {
+
       const categories = card.dataset.category.split(" ");
       const text = card.innerText.toLowerCase();
 
@@ -364,11 +369,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const matchesSearch =
         text.includes(searchValue);
 
-      if (matchesCategory && matchesSearch) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+      card.style.display =
+        matchesCategory && matchesSearch ? "block" : "none";
     });
   }
 

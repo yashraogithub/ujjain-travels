@@ -447,7 +447,7 @@
 
 .detail-modal.active { display:flex; }
 
-/* .modal-content {
+.modal-content {
     position: relative;
   background:#fff;
   width:750px;
@@ -467,7 +467,7 @@
   font-size: 28px;
   cursor: pointer;
   z-index: 10;   /* VERY IMPORTANT */
-} */
+}
 
 .modal-content img {
   width:100%;

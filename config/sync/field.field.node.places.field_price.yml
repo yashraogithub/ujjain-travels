@@ -1,0 +1,19 @@
+uuid: 3216ca56-e9c5-4f50-863d-bd7b578007dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.places
+id: node.places.field_price
+field_name: field_price
+entity_type: node
+bundle: places
+label: price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

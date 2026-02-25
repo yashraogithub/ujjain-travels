@@ -1,0 +1,19 @@
+uuid: 62d0618d-0419-43dd-80d9-094c3dae6aaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timing
+    - node.type.places
+id: node.places.field_timing
+field_name: field_timing
+entity_type: node
+bundle: places
+label: timing
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

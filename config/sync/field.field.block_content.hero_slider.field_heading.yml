@@ -1,0 +1,19 @@
+uuid: 30833028-5695-4c18-9191-87980055046b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_slider
+    - field.storage.block_content.field_heading
+id: block_content.hero_slider.field_heading
+field_name: field_heading
+entity_type: block_content
+bundle: hero_slider
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

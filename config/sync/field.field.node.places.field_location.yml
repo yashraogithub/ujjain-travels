@@ -1,0 +1,19 @@
+uuid: 6a67be2f-a207-4542-b2b8-02a659c725c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.places
+id: node.places.field_location
+field_name: field_location
+entity_type: node
+bundle: places
+label: location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

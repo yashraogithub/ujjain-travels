@@ -1,0 +1,34 @@
+uuid: e9795c2d-d130-4973-8756-d2d246e51e12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.destination.field_image
+    - taxonomy.vocabulary.destination
+  module:
+    - image
+    - text
+id: taxonomy_term.destination.default
+targetEntityType: taxonomy_term
+bundle: destination
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

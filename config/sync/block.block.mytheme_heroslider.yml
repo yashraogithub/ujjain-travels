@@ -1,0 +1,25 @@
+uuid: ab9a54be-e284-4f29-a6fc-2fdcc62ec1a6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_slider:f312bd84-4bca-4a3a-94f4-83423a5ce2cc'
+  module:
+    - block_content
+  theme:
+    - mytheme
+id: mytheme_heroslider
+theme: mytheme
+region: slider
+weight: -9
+provider: null
+plugin: 'block_content:f312bd84-4bca-4a3a-94f4-83423a5ce2cc'
+settings:
+  id: 'block_content:f312bd84-4bca-4a3a-94f4-83423a5ce2cc'
+  label: 'Hero Slider'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

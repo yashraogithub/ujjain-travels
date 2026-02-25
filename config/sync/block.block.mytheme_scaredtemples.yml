@@ -1,0 +1,25 @@
+uuid: e61e8799-f661-4a29-bb2c-d83cb2520980
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f89eed41-27d0-44bb-a579-1745aa9cb823'
+  module:
+    - block_content
+  theme:
+    - mytheme
+id: mytheme_scaredtemples
+theme: mytheme
+region: sacred_temples
+weight: 0
+provider: null
+plugin: 'block_content:f89eed41-27d0-44bb-a579-1745aa9cb823'
+settings:
+  id: 'block_content:f89eed41-27d0-44bb-a579-1745aa9cb823'
+  label: 'Scared Temples'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

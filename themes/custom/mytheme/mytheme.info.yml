@@ -13,5 +13,7 @@ regions:
   slider: Slider
   destination: Destination
   about: 'About'
+  sacred_temples: 'Sacred Temples'
+  contact_us: 'Contact Us'
   content: Content
   footer: Footer

@@ -1,0 +1,75 @@
+<section class="testimonials section-padding" id="testimonials">
+  <div class="container">
+    <div class="section-title">
+      <h2>What Travelers Say</h2>
+      <p>Experiences shared by pilgrims and tourists who visited Ujjain</p>
+    </div>
+
+    <div class="testimonials-slider">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        {% for row in rows %}
+          {% set node = row.content['#row']._entity %}
+
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+
+              <p>"{{ node.field_review.value }}"</p>
+
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">
+                  {{ node.field_avatar.value }}
+                </div>
+                <div class="testimonial-info">
+                  <h4>{{ node.field_author_name.value }}</h4>
+                  <span>{{ node.field_locationn.value }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}
+
+      </div>
+
+      <div class="testimonial-dots" id="testimonialDots">
+        {% for row in rows %}
+          <div class="testimonial-dot {% if loop.first %}active{% endif %}"></div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.getElementById("testimonialsTrack");
+  const dots = document.querySelectorAll(".testimonial-dot");
+  const cards = document.querySelectorAll(".testimonial-card");
+
+  let currentIndex = 0;
+
+  function updateSlider() {
+    track.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentIndex].classList.add("active");
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      currentIndex = index;
+      updateSlider();
+    });
+  });
+  setInterval(function () {
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateSlider();
+}, 4000);
+
+});
+</script>

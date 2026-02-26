@@ -1,0 +1,23 @@
+uuid: 2037bd99-dff8-4f53-8db5-b16572ff34f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pricee
+    - node.type.tour_package
+id: node.tour_package.field_pricee
+field_name: field_pricee
+entity_type: node
+bundle: tour_package
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

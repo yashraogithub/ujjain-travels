@@ -1,0 +1,54 @@
+<section class="packages section-padding" id="packages">
+  <div class="container">
+    <div class="section-title">
+      <h2>Tour Packages</h2>
+      <p>Curated spiritual and heritage tour packages to experience the best of Ujjain</p>
+    </div>
+
+    <div class="packages-grid">
+
+      {% for row in rows %}
+        {% set node = row.content['#row']._entity %}
+
+        <div class="package-card">
+          <div class="package-header">
+            <span class="tag" style="background: {{ node.field_tag_color.value }}">
+              {{ node.field_tag.value }}
+            </span>
+
+            <h3>{{ node.title.value }}</h3>
+
+            <div class="duration">
+              <i class="fas fa-calendar-alt"></i>
+              {{ node.field_duration.value }}
+            </div>
+          </div>
+
+          <div class="package-body">
+            <ul class="package-features">
+              {% for item in node.field_features %}
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  {{ item.value }}
+                </li>
+              {% endfor %}
+            </ul>
+
+            <div class="package-footer">
+              <div class="package-price">
+                <span class="amount">₹{{ node.field_pricee.value }}</span>
+                <span class="per">/person</span>
+              </div>
+
+              <a href="#contact" class="btn btn-primary">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

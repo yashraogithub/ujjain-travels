@@ -1,0 +1,24 @@
+uuid: 1e9581ff-6bc9-43ef-8896-4147ef3fc448
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.testimonials
+  module:
+    - views
+  theme:
+    - mytheme
+id: mytheme_views_block__testimonials_block_1
+theme: mytheme
+region: reviews
+weight: 0
+provider: null
+plugin: 'views_block:testimonials-block_1'
+settings:
+  id: 'views_block:testimonials-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

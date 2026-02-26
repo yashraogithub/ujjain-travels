@@ -1,0 +1,23 @@
+uuid: 909e4c6b-39be-43bb-8351-8e3fb7c44391
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stars
+    - node.type.hotel
+id: node.hotel.field_stars
+field_name: field_stars
+entity_type: node
+bundle: hotel
+label: Stars
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

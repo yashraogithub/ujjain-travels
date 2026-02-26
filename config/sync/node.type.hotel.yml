@@ -1,0 +1,18 @@
+uuid: 3bb29d87-912d-41e5-a032-35dd6d6605b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Hotel
+type: hotel
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

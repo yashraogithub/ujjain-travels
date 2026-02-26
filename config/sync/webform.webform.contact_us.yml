@@ -212,5 +212,43 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: yashraobhaisare82@gmail.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: '[webform_submission:values:your_email]'
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'New Contact Form Submission from [webform_submission:values:name]'
+      body: '<div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light">&nbsp;</div></div></div><div class="pointer-events-none absolute inset-x-px top-6 bottom-6"><div class="sticky z-1!"><div class="bg-token-bg-elevated-secondary sticky">&nbsp;</div></div></div><div class="corner-superellipse/1.1 rounded-3xl bg-token-bg-elevated-secondary"><div class="relative z-0 flex max-w-full"><div class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼ5 ͼj" id="code-block-viewer" dir="ltr"><div class="cm-scroller"><div class="cm-content q9tKkq_readonly"><span>Name: [webform_submission:values:name]</span><br><span>Email: [webform_submission:values:your_email]</span><br><span>Phone: [webform_submission:values:your_phone_number]</span><br><span>Subject: [webform_submission:values:subject]</span><br><br><span>Message:</span><br><span>[webform_submission:values:your_message]</span></div></div></div></div></div>'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      langcode: ''
+      parameters: {  }
+      debug: false
 variants: {  }

@@ -1,0 +1,72 @@
+uuid: 35b585ab-9704-4689-b161-6a461582d33d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hotel.field_amenities
+    - field.field.node.hotel.field_hotel_image
+    - field.field.node.hotel.field_hotel_location
+    - field.field.node.hotel.field_hotel_price
+    - field.field.node.hotel.field_stars
+    - node.type.hotel
+  module:
+    - image
+    - user
+id: node.hotel.default
+targetEntityType: node
+bundle: hotel
+mode: default
+content:
+  field_amenities:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_hotel_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_hotel_location:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_hotel_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_stars:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

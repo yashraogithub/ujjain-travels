@@ -1,55 +1,66 @@
-uuid: 0c84b104-a4f2-4b06-94d8-51b4ad5cf4f5
+uuid: de5d95b6-1fab-43f9-babe-065b67b98d48
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_gallery_item
-    - node.type.page
+    - field.field.node.hotel.field_amenities
+    - field.field.node.hotel.field_hotel_image
+    - field.field.node.hotel.field_hotel_location
+    - field.field.node.hotel.field_hotel_price
+    - field.field.node.hotel.field_stars
+    - image.style.thumbnail
+    - node.type.hotel
   module:
-    - paragraphs
+    - image
     - path
-    - text
-_core:
-  default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
-id: node.page.default
+id: node.hotel.default
 targetEntityType: node
-bundle: page
+bundle: hotel
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 31
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_gallery_item:
-    type: paragraphs
+  field_amenities:
+    type: string_textfield
+    weight: 125
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hotel_image:
+    type: image_image
     weight: 121
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_hotel_location:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hotel_price:
+    type: number
+    weight: 123
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_stars:
+    type: number
+    weight: 124
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

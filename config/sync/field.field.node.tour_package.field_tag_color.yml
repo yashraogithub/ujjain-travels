@@ -1,0 +1,19 @@
+uuid: 20c69389-200f-425a-9aa3-5cd6acd69dd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tag_color
+    - node.type.tour_package
+id: node.tour_package.field_tag_color
+field_name: field_tag_color
+entity_type: node
+bundle: tour_package
+label: 'Tag Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

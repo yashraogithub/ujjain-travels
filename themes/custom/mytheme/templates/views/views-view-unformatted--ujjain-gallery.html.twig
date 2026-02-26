@@ -1,0 +1,30 @@
+<section class="gallery section-padding" id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>Ujjain Gallery</h2>
+      <p>Glimpses of the divine beauty and spiritual aura of Ujjain</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      {% for row in rows %}
+        {% set node = row.content['#row']._entity %}
+
+        {% for image in node.field_gallery_image %}
+          <div class="gallery-item">
+            <img 
+              src="{{ file_url(image.entity.fileuri) }}"
+              alt="{{ image.alt }}"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        {% endfor %}
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

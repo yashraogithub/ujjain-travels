@@ -1,0 +1,28 @@
+uuid: facfc89f-ac8e-48ea-b4c5-b7584e78311e
+langcode: hi
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - mytheme
+id: mytheme_languageswitcher_2
+theme: mytheme
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+      hi: hi

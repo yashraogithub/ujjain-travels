@@ -1,0 +1,22 @@
+uuid: 0ded732e-77f0-4f34-85ff-296cb3744359
+langcode: hi
+status: true
+dependencies:
+  config:
+    - node.type.places
+id: node.places.sticky
+field_name: sticky
+entity_type: node
+bundle: places
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

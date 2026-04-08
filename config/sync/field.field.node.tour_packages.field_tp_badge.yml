@@ -1,0 +1,25 @@
+uuid: b2bf5f49-1d96-48c0-ba53-7e58e8d9c324
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tp_badge
+    - node.type.tour_packages
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tour_packages.field_tp_badge
+field_name: field_tp_badge
+entity_type: node
+bundle: tour_packages
+label: Badge
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

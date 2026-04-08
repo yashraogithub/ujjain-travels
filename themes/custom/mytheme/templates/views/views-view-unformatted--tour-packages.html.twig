@@ -1,16 +1,23 @@
 <section class="packages section-padding" id="packages">
   <div class="container">
-    <div class="section-title">
+    {# <div class="section-title">
       <h2>Tour Packages</h2>
       <p>Curated spiritual and heritage tour packages to experience the best of Ujjain</p>
-    </div>
+    </div> #}
 
     <div class="packages-grid">
 
       {% for row in rows %}
+
         {% set node = row.content['#row']._entity %}
+        {% set langcode = row.content['#row'].node_field_data_langcode %}
+
+        {% if node.hasTranslation(langcode) %}
+          {% set node = node.getTranslation(langcode) %}
+        {% endif %}
 
         <div class="package-card">
+
           <div class="package-header">
             <span class="tag" style="background: {{ node.field_tag_color.value }}">
               {{ node.field_tag.value }}
@@ -40,10 +47,11 @@
                 <span class="per">/person</span>
               </div>
 
-              <a href="#contact" class="btn btn-primary">
+              <a href="/contact-us" class="btn btn-primary">
                 Book Now
               </a>
             </div>
+
           </div>
         </div>
 

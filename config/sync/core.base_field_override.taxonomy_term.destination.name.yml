@@ -1,0 +1,18 @@
+uuid: 53074e29-fec6-404f-ba6d-2934f60770b8
+langcode: hi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.destination
+id: taxonomy_term.destination.name
+field_name: name
+entity_type: taxonomy_term
+bundle: destination
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,44 +1,35 @@
 <section class="hotels section-padding" id="hotels">
   <div class="container">
-    <div class="section-title">
-      <h2>Hotels & Stay</h2>
-      <p>Comfortable accommodations near Ujjain's sacred temples and ghats</p>
-    </div>
 
     <div class="hotels-grid">
+  {% for row in rows %}
 
-      {% for row in rows %}
-        {% set node = row.content['#row']._entity %}
+{% set node = row.content['#row']._entity %}
+{% set langcode = row.content['#row'].node_field_data_langcode %}
 
-        <div class="hotel-card">
+{% if node.hasTranslation(langcode) %}
+  {% set node = node.getTranslation(langcode) %}
+{% endif %}
 
-          <div class="hotel-img">
-            <img 
-              src="{{ file_url(node.field_hotel_image.entity.fileuri) }}" 
-              alt="{{ node.title.value }}"
-              loading="lazy"
-            >
+<div class="hotel-card">
 
-            <div class="stars">
-              {% for i in 1..node.field_stars.value %}
-                <i class="fas fa-star"></i>
-              {% endfor %}
-            </div>
-          </div>
+  <div class="hotel-img">
+    <img src="{{ file_url(node.field_hotel_image.entity.fileuri) }}" alt="{{ node.title.value }}">
+  </div>
 
-          <div class="hotel-body">
-            <h3>{{ node.title.value }}</h3>
+  <div class="hotel-body">
 
-            <div class="hotel-location">
-              <i class="fas fa-map-marker-alt"></i>
-              {{ node.field_hotel_location.value }}
-            </div>
+    <h3>{{ node.title.value }}</h3>
 
-            <div class="hotel-amenities">
-              {% for item in node.field_amenities %}
-                <span>{{ item.value }}</span>
-              {% endfor %}
-            </div>
+    <div class="hotel-location">
+      {{ node.field_hotel_location.value }}
+    </div>
+
+    <div class="hotel-amenities">
+      {% for item in node.field_amenities %}
+        <span>{{ item.value }}</span>
+      {% endfor %}
+    </div>
 
             <div class="hotel-footer">
               <div class="price">
@@ -49,13 +40,7 @@
                 Book
               </a>
             </div>
-          </div>
-
-        </div>
-
-      {% endfor %}
-
-    </div>
   </div>
+</div>
+{% endfor %}
 </section>
-{# sdy #}

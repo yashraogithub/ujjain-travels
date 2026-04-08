@@ -1,0 +1,28 @@
+uuid: c8678f3a-51b3-4326-9d05-3963fbab9ae3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tp_discount
+    - node.type.tour_packages
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tour_packages.field_tp_discount
+field_name: field_tp_discount
+entity_type: node
+bundle: tour_packages
+label: Discount
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

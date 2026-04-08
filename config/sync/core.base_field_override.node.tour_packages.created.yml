@@ -1,0 +1,18 @@
+uuid: a9f7740a-43b7-4130-ba43-ba22745d6400
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tour_packages
+id: node.tour_packages.created
+field_name: created
+entity_type: node
+bundle: tour_packages
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

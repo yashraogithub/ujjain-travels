@@ -1,18 +1,24 @@
 <section class="testimonials section-padding" id="testimonials">
   <div class="container">
-    <div class="section-title">
-      <h2>What Travelers Say</h2>
-      <p>Experiences shared by pilgrims and tourists who visited Ujjain</p>
-    </div>
+
+    
 
     <div class="testimonials-slider">
+
       <div class="testimonials-track" id="testimonialsTrack">
 
         {% for row in rows %}
+
           {% set node = row.content['#row']._entity %}
+          {% set langcode = row.content['#row'].node_field_data_langcode %}
+
+          {% if node.hasTranslation(langcode) %}
+            {% set node = node.getTranslation(langcode) %}
+          {% endif %}
 
           <div class="testimonial-card">
             <div class="testimonial-inner">
+
               <div class="quote-icon">
                 <i class="fas fa-quote-left"></i>
               </div>
@@ -20,14 +26,18 @@
               <p>"{{ node.field_review.value }}"</p>
 
               <div class="testimonial-author">
+
                 <div class="testimonial-avatar">
                   {{ node.field_avatar.value }}
                 </div>
+
                 <div class="testimonial-info">
                   <h4>{{ node.field_author_name.value }}</h4>
                   <span>{{ node.field_locationn.value }}</span>
                 </div>
+
               </div>
+
             </div>
           </div>
 
@@ -42,6 +52,7 @@
       </div>
 
     </div>
+
   </div>
 </section>
 <script>

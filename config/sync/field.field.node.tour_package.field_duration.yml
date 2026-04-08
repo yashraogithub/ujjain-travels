@@ -12,7 +12,7 @@ bundle: tour_package
 label: Duration
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

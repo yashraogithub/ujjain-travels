@@ -11,7 +11,7 @@ dependencies:
 id: mytheme_mainnavigation
 theme: mytheme
 region: primary_menu
-weight: 0
+weight: -17
 provider: null
 plugin: 'system_menu_block:main'
 settings:

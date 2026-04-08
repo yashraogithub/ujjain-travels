@@ -1,0 +1,18 @@
+uuid: de4521dd-9523-4544-a10d-2a98008b7c01
+langcode: hi
+status: true
+dependencies:
+  config:
+    - node.type.places
+id: node.places.created
+field_name: created
+entity_type: node
+bundle: places
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

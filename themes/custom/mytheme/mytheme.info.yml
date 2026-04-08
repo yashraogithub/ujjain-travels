@@ -19,6 +19,7 @@ regions:
   gallery: 'Gallery'
   hotels: 'Hotels'
   why_visit: 'Why Visit'
+  map: 'Map Section'
   reviews: 'Reviews'
   content: 'Content'
   footer: 'Footer'

@@ -1,0 +1,19 @@
+uuid: b79447aa-3d60-41c8-bf0f-0f210cb83dbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map_section
+    - field.storage.block_content.field_map_title
+id: block_content.map_section.field_map_title
+field_name: field_map_title
+entity_type: block_content
+bundle: map_section
+label: 'Map Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

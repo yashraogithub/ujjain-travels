@@ -1,0 +1,18 @@
+uuid: 22006b5d-4442-463c-afef-37a1ae618a3c
+langcode: hi
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_slider
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.hero_slider
+target_entity_type_id: block_content
+target_bundle: hero_slider
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,41 @@
+uuid: fef2b62c-25e5-4b86-b14f-727365935e7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map_section
+    - field.field.block_content.map_section.field_map_description
+    - field.field.block_content.map_section.field_map_iframe
+    - field.field.block_content.map_section.field_map_title
+  module:
+    - text
+id: block_content.map_section.default
+targetEntityType: block_content
+bundle: map_section
+mode: default
+content:
+  field_map_description:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_map_iframe:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_map_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

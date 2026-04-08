@@ -1,0 +1,21 @@
+uuid: 2b0c1436-a12f-4cce-a292-f4355b37dacf
+langcode: hi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.destination
+  module:
+    - text
+id: taxonomy_term.destination.description
+field_name: description
+entity_type: taxonomy_term
+bundle: destination
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

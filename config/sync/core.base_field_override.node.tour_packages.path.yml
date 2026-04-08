@@ -1,0 +1,20 @@
+uuid: 41860289-b3f3-48b6-8b50-aea230e7ff17
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tour_packages
+  module:
+    - path
+id: node.tour_packages.path
+field_name: path
+entity_type: node
+bundle: tour_packages
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

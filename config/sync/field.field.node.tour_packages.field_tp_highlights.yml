@@ -1,0 +1,26 @@
+uuid: 4786b6e8-867c-4f52-8d56-03ac82c45913
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tp_highlights
+    - node.type.tour_packages
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tour_packages.field_tp_highlights
+field_name: field_tp_highlights
+entity_type: node
+bundle: tour_packages
+label: 'Tour Highlights'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

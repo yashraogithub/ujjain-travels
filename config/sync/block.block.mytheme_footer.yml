@@ -1,11 +1,7 @@
 uuid: ffc313b0-ed19-4aa8-991c-ba4c758b0b67
 langcode: en
-status: true
+status: false
 dependencies:
-  content:
-    - 'block_content:basic:df9da62b-5844-4703-bee2-b91d47bb01fb'
-  module:
-    - block_content
   theme:
     - mytheme
 id: mytheme_footer

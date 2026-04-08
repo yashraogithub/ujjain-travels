@@ -1,0 +1,97 @@
+<section class="contact section-padding" id="contact">
+
+<div class="container">
+
+{% if node.langcode.value == 'hi' %}
+
+<div class="section-title">
+<h2>संपर्क करें</h2>
+<p>अपनी उज्जैन यात्रा की योजना हमारे साथ बनाएं। हम आपकी मदद के लिए यहाँ हैं।</p>
+</div>
+
+{% else %}
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Plan your Ujjain trip with us. We're here to help!</p>
+</div>
+
+{% endif %}
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<div class="contact-item">
+<div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+<div>
+
+{% if node.langcode.value == 'hi' %}
+<h4>हमारा कार्यालय</h4>
+<p>EWS-75 इंदिरा नगर<br>उज्जैन, मध्य प्रदेश 456001, भारत</p>
+{% else %}
+<h4>Our Office</h4>
+<p>EWS-75 Indira Nagar<br>Ujjain, Madhya Pradesh 456001, India</p>
+{% endif %}
+
+</div>
+</div>
+
+
+<div class="contact-item">
+<div class="icon"><i class="fas fa-phone"></i></div>
+<div>
+{% if node.langcode.value == 'hi' %}
+<h4>फ़ोन</h4>
+{% else %}
+<h4>Phone</h4>
+{% endif %}
+
+<p>+91 78040 25072<br>+91 78965 41230</p>
+
+</div>
+</div>
+
+
+<div class="contact-item">
+<div class="icon"><i class="fas fa-envelope"></i></div>
+<div>
+
+{% if node.langcode.value == 'hi' %}
+<h4>ईमेल</h4>
+{% else %}
+<h4>Email</h4>
+{% endif %}
+
+<p>yashraobhaisare82@gmail.com</p>
+
+</div>
+</div>
+
+
+<div class="contact-item">
+<div class="icon"><i class="fas fa-clock"></i></div>
+<div>
+
+{% if node.langcode.value == 'hi' %}
+<h4>कार्य समय</h4>
+<p>24/7 घंटे</p>
+{% else %}
+<h4>Working Hours</h4>
+<p>24/7 hours</p>
+{% endif %}
+
+</div>
+</div>
+
+</div>
+
+<div class="contact-form">
+{{ drupal_entity('webform', 'contact_us') }}
+</div>
+
+</div>
+</div>
+
+</section>
+        

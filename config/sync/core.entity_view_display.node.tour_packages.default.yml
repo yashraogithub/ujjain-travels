@@ -1,0 +1,168 @@
+uuid: 7b06379a-5689-426a-b085-01ec04ad5fde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tour_packages.field_tp_about
+    - field.field.node.tour_packages.field_tp_badge
+    - field.field.node.tour_packages.field_tp_best_time
+    - field.field.node.tour_packages.field_tp_description
+    - field.field.node.tour_packages.field_tp_difficulty
+    - field.field.node.tour_packages.field_tp_discount
+    - field.field.node.tour_packages.field_tp_duration
+    - field.field.node.tour_packages.field_tp_exclusions
+    - field.field.node.tour_packages.field_tp_group_size
+    - field.field.node.tour_packages.field_tp_highlights
+    - field.field.node.tour_packages.field_tp_image
+    - field.field.node.tour_packages.field_tp_inclusions
+    - field.field.node.tour_packages.field_tp_itinerary
+    - field.field.node.tour_packages.field_tp_old_price
+    - field.field.node.tour_packages.field_tp_price
+    - field.field.node.tour_packages.field_tp_rating
+    - node.type.tour_packages
+  module:
+    - image
+    - options
+    - text
+    - user
+id: node.tour_packages.default
+targetEntityType: node
+bundle: tour_packages
+mode: default
+content:
+  field_tp_about:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_tp_badge:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_tp_best_time:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_tp_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_tp_difficulty:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_tp_discount:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_tp_duration:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_tp_exclusions:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_tp_group_size:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_tp_highlights:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_tp_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_tp_inclusions:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_tp_itinerary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_tp_old_price:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_tp_price:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_tp_rating:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

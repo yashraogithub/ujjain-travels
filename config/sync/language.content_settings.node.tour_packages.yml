@@ -1,0 +1,18 @@
+uuid: 30052543-9892-44c8-a784-c5418bbfe9b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tour_packages
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.tour_packages
+target_entity_type_id: node
+target_bundle: tour_packages
+default_langcode: site_default
+language_alterable: true

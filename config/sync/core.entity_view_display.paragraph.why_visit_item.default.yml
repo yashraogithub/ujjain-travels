@@ -1,0 +1,38 @@
+uuid: 5d82414d-4424-4c00-b932-4283f755fa06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.why_visit_item.field_card_description
+    - field.field.paragraph.why_visit_item.field_card_title
+    - field.field.paragraph.why_visit_item.field_icon
+    - paragraphs.paragraphs_type.why_visit_item
+id: paragraph.why_visit_item.default
+targetEntityType: paragraph
+bundle: why_visit_item
+mode: default
+content:
+  field_card_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_card_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

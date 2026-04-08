@@ -1,0 +1,28 @@
+uuid: 0d215e0d-d261-4da6-aa67-76ef0d0ad741
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price_km
+    - node.type.car_package
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.car_package.field_price_km
+field_name: field_price_km
+entity_type: node
+bundle: car_package
+label: 'Price per KM'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

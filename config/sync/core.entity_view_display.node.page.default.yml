@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_gallery_item
     - node.type.page
   module:
-    - entity_reference_revisions
     - text
     - user
 _core:
@@ -24,16 +22,8 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-  field_gallery_item:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 102
-    region: content
   links:
     weight: 101
     region: content
-hidden: {  }
+hidden:
+  langcode: true

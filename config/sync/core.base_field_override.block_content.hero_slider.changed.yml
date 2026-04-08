@@ -1,0 +1,18 @@
+uuid: 3bfc9963-1aef-4413-8070-8b0a9d426a47
+langcode: hi
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_slider
+id: block_content.hero_slider.changed
+field_name: changed
+entity_type: block_content
+bundle: hero_slider
+label: Changed
+description: 'The time that the content block was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<div class="section-title"><h2>उज्जैन में घूमने के प्रमुख स्थान</h2><p>सबसे प्रसिद्ध मंदिरों, पवित्र घाटों और ऐतिहासिक स्थलों की खोज करें</p></div>'
+            format: full_html

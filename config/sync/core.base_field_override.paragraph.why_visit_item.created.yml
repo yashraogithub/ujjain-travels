@@ -1,0 +1,18 @@
+uuid: 01458d15-d6d1-44bf-b2e2-ee0b7447d0c9
+langcode: hi
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.why_visit_item
+id: paragraph.why_visit_item.created
+field_name: created
+entity_type: paragraph
+bundle: why_visit_item
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

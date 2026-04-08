@@ -1,11 +1,10 @@
 <div class="card-inner"
-     data-title="{{ fields.title.content|striptags }}"
-     data-location="{{ fields.field_location.content|striptags }}"
-     data-description="{{ fields.field_fulldesc.content|striptags }}"
-     data-price="{{ fields.field_price.content|striptags }}"
-     data-rating="{{ fields.field_rating.content|striptags }}"
-     data-timing="{{ fields.field_timing.content|striptags }}">
-
+    data-title="{{ fields.title.content|striptags|trim }}"
+    data-location="{{ fields.field_location.content|striptags|trim }}"
+    data-description="{{ fields.field_fulldesc.content|striptags|trim }}"
+    data-price="{{ fields.field_price.content|striptags|trim }}"
+    data-rating="{{ fields.field_rating.content|striptags|trim }}"
+    data-timing="{{ fields.field_timing.content|striptags|trim }}"
   {{ fields.field_imagee.content }}
 
   <div class="place-card-body">

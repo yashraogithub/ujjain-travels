@@ -311,3 +311,94 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+// filter and destination block 
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".place-card");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+
+      document.querySelector(".filter-btn.active")?.classList.remove("active");
+      this.classList.add("active");
+
+      const filter = this.dataset.filter;
+
+      cards.forEach(card => {
+        if (filter === "all") {
+          card.style.display = "block";
+        } else {
+          const categories = card.dataset.category.split(" ");
+          if (categories.includes(filter)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        }
+      });
+
+    });
+  });
+
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".place-card");
+  const searchInput = document.getElementById("searchInput");
+
+  let currentFilter = "all";
+
+  function filterCards() {
+    const searchValue = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+
+      const categories = card.dataset.category.split(" ");
+      const text = card.innerText.toLowerCase();
+
+      const matchesCategory =
+        currentFilter === "all" || categories.includes(currentFilter);
+
+      const matchesSearch =
+        text.includes(searchValue);
+
+      card.style.display =
+        matchesCategory && matchesSearch ? "block" : "none";
+    });
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      document.querySelector(".filter-btn.active")?.classList.remove("active");
+      this.classList.add("active");
+      currentFilter = this.dataset.filter;
+      filterCards();
+    });
+  });
+
+  searchInput.addEventListener("input", filterCards);
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+    });
+
+});

@@ -1,0 +1,23 @@
+uuid: 282a5c16-2a1c-4144-9ab6-08fbc5be3f51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating
+    - node.type.places
+id: node.places.field_rating
+field_name: field_rating
+entity_type: node
+bundle: places
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

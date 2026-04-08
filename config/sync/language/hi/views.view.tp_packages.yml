@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<section class="section-header"><div class="container"><h2 class="section-title">पवित्र यात्रा पैकेज</h2><p class="section-subtitle">हमारी आध्यात्मिक, विरासत और साहसिक यात्राओं के विशेष संग्रह को देखें।</p><div class="title-divider">&nbsp;</div></div></section>'
+            format: full_html

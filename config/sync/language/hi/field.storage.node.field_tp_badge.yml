@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    -
+      label: 'धार्मिक यात्रा'
+    -
+      label: 'साहसिक यात्रा'
+    -
+      label: 'सांस्कृतिक विरासत'

@@ -1,0 +1,26 @@
+uuid: 1b6d89e8-a70a-4e04-b4c6-612d8c3bde5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tp_about
+    - node.type.tour_packages
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tour_packages.field_tp_about
+field_name: field_tp_about
+entity_type: node
+bundle: tour_packages
+label: 'Tour About'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

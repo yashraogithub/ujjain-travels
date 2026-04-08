@@ -1,0 +1,26 @@
+uuid: 97c00ca9-34e3-47cc-bd9d-462516b39a08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tp_exclusions
+    - node.type.tour_packages
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tour_packages.field_tp_exclusions
+field_name: field_tp_exclusions
+entity_type: node
+bundle: tour_packages
+label: 'Tour Exclusions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

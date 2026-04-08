@@ -1,0 +1,67 @@
+uuid: 91c58898-6027-4fac-bb18-d568c0019854
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tour_package.field_duration
+    - field.field.node.tour_package.field_features
+    - field.field.node.tour_package.field_pricee
+    - field.field.node.tour_package.field_tag
+    - field.field.node.tour_package.field_tag_color
+    - node.type.tour_package
+  module:
+    - user
+id: node.tour_package.default
+targetEntityType: node
+bundle: tour_package
+mode: default
+content:
+  field_duration:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_features:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_pricee:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_tag:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_tag_color:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

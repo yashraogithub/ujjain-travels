@@ -1,0 +1,19 @@
+uuid: b2e587d9-6518-447b-b4e0-e157003bc574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.tour_package
+id: node.tour_package.field_duration
+field_name: field_duration
+entity_type: node
+bundle: tour_package
+label: Duration
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

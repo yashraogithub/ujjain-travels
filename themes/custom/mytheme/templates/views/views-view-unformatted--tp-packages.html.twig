@@ -1,0 +1,109 @@
+
+<section class="tours-section">
+  <div class="container">
+    <div class="tours-grid" id="toursGrid">
+
+      {% for row in rows %}
+    {% set node = row.content['#row']._entity %}
+
+  {% set current_path = path('<current>') %}
+  {% set lang = 'en' %}
+  {% if '/hi/' in current_path %}
+    {% set lang = 'hi' %}
+  {% endif %}
+
+  {% set content = node.hasTranslation(lang) ? node.getTranslation(lang) : node %}
+        <div class="tour-card" 
+             data-category="{{ content.field_tp_badge.value|lower }}" 
+             data-price="{{ content.field_tp_price.value }}">
+
+          <!-- IMAGE -->
+          <div class="card-image">
+            <img src="{{ file_url(content.field_tp_image.entity.fileuri) }}" 
+                 alt="{{ content.title.value }}" 
+                 loading="lazy">
+
+            <!-- BADGES -->
+            <div class="card-badges">
+              <span class="badge badge-adventure">
+                {{ content.field_tp_badge.value }}
+              </span>
+
+              <span class="badge badge-discount">
+                {{ content.field_tp_discount.value }}% OFF
+              </span>
+            </div>
+
+            <!-- DURATION -->
+            <div class="card-duration">
+              <i class="far fa-clock"></i> 
+              {{ content.field_tp_duration.value }}
+            </div>
+
+            <div class="card-image-overlay"></div>
+          </div>
+
+          <!-- BODY -->
+          <div class="card-body">
+
+            <!-- TITLE -->
+            <h3 class="card-title">
+              {{ content.title.value }}
+            </h3>
+
+            <!-- DESCRIPTION -->
+            <p class="card-description">
+              {{ content.field_tp_description.value }}
+            </p>
+
+            <!-- META -->
+            <div class="card-meta">
+              <div class="meta-item">
+                <i class="fas fa-star"></i>
+                <span>{{ content.field_tp_rating.value }}</span>
+              </div>
+
+              <div class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>{{ content.field_tp_group_size.value }}</span>
+              </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="card-footer">
+
+              <div class="card-price">
+                <span class="price-label">Starting from</span>
+
+                <div class="price-row">
+                  <span class="price-current">
+                    ₹{{ content.field_tp_price.value }}
+                  </span>
+
+                  <span class="price-original">
+                    ₹{{ content.field_tp_old_price.value }}
+                  </span>
+                </div>
+              </div>
+
+              <!-- LINK -->
+              <a href="{{ path('entity.node.canonical', {'node': content.id}) }}" 
+                 class="btn-details">
+                View Details 
+                <i class="fas fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+
+
+

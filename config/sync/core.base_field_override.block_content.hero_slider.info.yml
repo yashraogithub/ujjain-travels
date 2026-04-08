@@ -1,0 +1,18 @@
+uuid: a4e84406-ae7a-43c2-a88d-5929c368c660
+langcode: hi
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_slider
+id: block_content.hero_slider.info
+field_name: info
+entity_type: block_content
+bundle: hero_slider
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

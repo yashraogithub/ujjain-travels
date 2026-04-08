@@ -1,0 +1,19 @@
+uuid: 8e3704f8-2e60-4364-beed-a3edfb0f291b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fulldesc
+    - node.type.places
+id: node.places.field_fulldesc
+field_name: field_fulldesc
+entity_type: node
+bundle: places
+label: fullDesc
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

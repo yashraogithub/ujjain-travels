@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<div class="section-title"><h2>टूर पैकेज</h2><p>उज्जैन के आध्यात्मिक और ऐतिहासिक अनुभव के लिए विशेष रूप से तैयार किए गए टूर पैकेज</p></div>'
+            format: full_html

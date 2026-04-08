@@ -1,0 +1,28 @@
+uuid: e34126b2-a63a-4846-9797-171dae5f651f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tp_rating
+    - node.type.tour_packages
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tour_packages.field_tp_rating
+field_name: field_tp_rating
+entity_type: node
+bundle: tour_packages
+label: Rating
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

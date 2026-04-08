@@ -1,0 +1,22 @@
+uuid: c5aec4c3-ccd4-48fa-aa0b-3800d83aafa1
+langcode: hi
+status: true
+dependencies:
+  config:
+    - node.type.tour_package
+id: node.tour_package.promote
+field_name: promote
+entity_type: node
+bundle: tour_package
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

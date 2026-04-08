@@ -1,0 +1,39 @@
+uuid: f96e70a0-7a74-4595-88b0-4d85676af75a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.places_grid
+  module:
+    - language
+    - system
+    - views
+  theme:
+    - mytheme
+id: mytheme_views_block__places_grid_block_1_2
+theme: mytheme
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:places_grid-block_1'
+settings:
+  id: 'views_block:places_grid-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /places
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+      hi: hi

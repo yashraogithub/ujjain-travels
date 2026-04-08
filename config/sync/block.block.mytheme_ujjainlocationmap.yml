@@ -1,0 +1,25 @@
+uuid: 5d59b818-c328-46cf-b81d-6493f544cba7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:map_section:2fdd8d7a-4fd4-48f1-a769-f7ef26fa1d30'
+  module:
+    - block_content
+  theme:
+    - mytheme
+id: mytheme_ujjainlocationmap
+theme: mytheme
+region: map
+weight: -16
+provider: null
+plugin: 'block_content:2fdd8d7a-4fd4-48f1-a769-f7ef26fa1d30'
+settings:
+  id: 'block_content:2fdd8d7a-4fd4-48f1-a769-f7ef26fa1d30'
+  label: 'Ujjain Location Map'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

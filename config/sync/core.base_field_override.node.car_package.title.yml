@@ -1,0 +1,18 @@
+uuid: 4d225da6-8d51-4b6c-aeb5-9ab4bbbd6a26
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.car_package
+id: node.car_package.title
+field_name: title
+entity_type: node
+bundle: car_package
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

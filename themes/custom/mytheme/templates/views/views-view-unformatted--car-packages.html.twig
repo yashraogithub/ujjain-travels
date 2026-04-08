@@ -1,0 +1,64 @@
+<section class="car-section">
+  <div class="container">
+
+    <div class="car-grid">
+
+      {% for row in rows %}
+
+        {% set node = row.content['#row']._entity %}
+
+        {# ✅ SAME LOGIC AS TOURS #}
+        {% set current_path = path('<current>') %}
+        {% set lang = 'en' %}
+
+        {% if '/hi/' in current_path %}
+          {% set lang = 'hi' %}
+        {% endif %}
+
+        {# ✅ TRANSLATION PICK #}
+        {% set car = node.hasTranslation(lang) ? node.getTranslation(lang) : node %}
+
+        <div class="car-card">
+
+          <!-- IMAGE -->
+          <div class="car-img-wrap">
+            {% if car.field_car_image.entity %}
+              <img src="{{ file_url(car.field_car_image.entity.fileuri) }}" 
+                   alt="{{ car.title.value }}">
+            {% endif %}
+          </div>
+
+          <!-- BODY -->
+          <div class="car-body">
+
+            <!-- TITLE -->
+            <h3>{{ car.title.value }}</h3>
+
+            <!-- DESC -->
+            <p>{{ car.field_car_desc.value|default('') }}</p>
+
+            <!-- INFO -->
+            <div class="car-info">
+              <span>👥 {{ car.field_seats.value|default('') }}</span>
+            </div>
+
+            <!-- PRICE -->
+            <div class="car-price">
+              ₹{{ car.field_price_km.value|default('') }}/km
+            </div>
+
+            <!-- BUTTON -->
+            <a href="#" class="car-btn">
+              {{ 'Book Now'|t }}
+            </a>
+
+          </div>
+
+        </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>

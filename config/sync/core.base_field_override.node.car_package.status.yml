@@ -1,0 +1,22 @@
+uuid: 9fe48538-81ab-4539-9bdd-65271ba9f6e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.car_package
+id: node.car_package.status
+field_name: status
+entity_type: node
+bundle: car_package
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

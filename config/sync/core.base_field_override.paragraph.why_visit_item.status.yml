@@ -1,0 +1,22 @@
+uuid: 72561fd4-3393-4360-898e-2a780ca3cb76
+langcode: hi
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.why_visit_item
+id: paragraph.why_visit_item.status
+field_name: status
+entity_type: paragraph
+bundle: why_visit_item
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

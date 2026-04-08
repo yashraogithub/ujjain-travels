@@ -1,0 +1,18 @@
+uuid: 36a979e4-ad75-4092-801c-4ea12e1de979
+langcode: hi
+status: true
+dependencies:
+  config:
+    - node.type.places
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.places
+target_entity_type_id: node
+target_bundle: places
+default_langcode: site_default
+language_alterable: false

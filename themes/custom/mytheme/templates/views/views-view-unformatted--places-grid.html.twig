@@ -1,0 +1,253 @@
+
+
+<style>
+.detail-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.detail-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  width: 800px;
+  max-width: 95%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.modal-body h2 {
+  margin-bottom: 15px;
+}
+
+.modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.modal-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+</style>
+<section class="destinations section-padding" id="destinations">
+<div class="container">
+
+{# <div class="section-title">
+<h2>Places to Visit in Ujjain</h2>
+<p>Explore the most revered temples, sacred ghats, and heritage sites</p>
+</div> #}
+
+{# ===== GET TAXONOMY ===== #}
+{% set categories = [] %}
+{% for row in rows %}
+  {% set node = row.content['#row']._entity %}
+  {% for item in node.field_destination_category %}
+    {% if item.entity %}
+      {% set label = item.entity.label|lower|replace({' ':'-'}) %}
+      {% if label not in categories %}
+        {% set categories = categories|merge([label]) %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<div class="search-filter">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search places...">
+  </div>
+
+  <div class="filter-btns">
+    <button class="filter-btn active" data-filter="all">All</button>
+    {% for cat in categories %}
+      <button class="filter-btn" data-filter="{{ cat }}">
+        {{ cat|replace({'-':' '})|title }}
+      </button>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="places-grid">
+  {% for row in rows %}
+    {% set node = row.content['#row']._entity %}
+    {% set groups = [] %}
+    {% for item in node.field_destination_category %}
+      {% if item.entity %}
+        {% set group = item.entity.label|lower|replace({' ':'-'}) %}
+        {% set groups = groups|merge([group]) %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="place-card"
+         data-category="{{ groups|join(' ') }}">
+      {{ row.content }}
+    </div>
+  {% endfor %}
+</div>
+<div id="detailModal" class="detail-modal">
+  <div class="modal-content">
+
+    <span class="close-modal">&times;</span>
+
+    <div class="modal-image">
+      <img id="modalImg">
+    </div>
+
+    <div class="modal-body">
+      <h2 id="modalTitle"></h2>
+
+      <div class="modal-meta">
+        <span><strong>📍</strong> <span id="metaLocation"></span></span>
+        <span><strong>⏰</strong> <span id="metaTiming"></span></span>
+        <span><strong>⭐</strong> <span id="metaRating"></span></span>
+        <span><strong>💰</strong> <span id="metaPrice"></span></span>
+      </div>
+
+      <p id="modalDesc"></p>
+
+    </div>
+
+  </div>
+</div>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".place-card");
+  const searchInput = document.getElementById("searchInput");
+
+  let currentFilter = "all";
+
+  function filterCards() {
+    const searchValue = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+
+      const categories = card.dataset.category.split(" ");
+      const text = card.innerText.toLowerCase();
+
+      const matchesCategory =
+        currentFilter === "all" || categories.includes(currentFilter);
+
+      const matchesSearch =
+        text.includes(searchValue);
+
+      card.style.display =
+        matchesCategory && matchesSearch ? "block" : "none";
+    });
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      document.querySelector(".filter-btn.active")?.classList.remove("active");
+      this.classList.add("active");
+      currentFilter = this.dataset.filter;
+      filterCards();
+    });
+  });
+
+  searchInput.addEventListener("input", filterCards);
+
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+  const modal = document.getElementById("detailModal");
+
+  document.querySelectorAll(".card-inner").forEach(card => {
+
+    card.addEventListener("click", function () {
+
+      document.getElementById("modalImg").src =
+        this.querySelector("img").src;
+
+      document.getElementById("modalTitle").innerText =
+        this.dataset.title || "";
+
+      document.getElementById("metaLocation").innerText =
+        this.dataset.location || "";
+
+      document.getElementById("metaTiming").innerText =
+        this.dataset.timing || "";
+
+      document.getElementById("metaRating").innerText =
+        this.dataset.rating || "";
+
+      document.getElementById("metaPrice").innerText =
+        this.dataset.price || "";
+
+      document.getElementById("modalDesc").innerText =
+        this.dataset.description || "";
+
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+
+  });
+
+  // Close on X click or background click
+  modal.addEventListener("click", function(e){
+    if(e.target.classList.contains("close-modal") || e.target === modal){
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // ESC close
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+});
+</script>

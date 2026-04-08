@@ -1,0 +1,29 @@
+uuid: 8d3c8b0b-a50a-4af9-82a8-5660ea2ec837
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.tp_packages
+  module:
+    - system
+    - views
+  theme:
+    - mytheme
+id: mytheme_views_block__tp_packages_block_1
+theme: mytheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:tp_packages-block_1'
+settings:
+  id: 'views_block:tp_packages-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /tour-packages

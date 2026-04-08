@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<div class="section-title"><h2>श्रद्धालुओं और यात्रियों की राय</h2><p>उज्जैन की यात्रा करने वाले श्रद्धालुओं और पर्यटकों के अनुभव</p></div>'
+            format: full_html

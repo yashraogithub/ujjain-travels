@@ -1,0 +1,30 @@
+uuid: 97a5b1c0-af51-4561-8de9-6ec7a00766a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tp_difficulty
+field_name: field_tp_difficulty
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: easy
+      label: Easy
+    -
+      value: moderate
+      label: Moderate
+    -
+      value: hard
+      label: Hard
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

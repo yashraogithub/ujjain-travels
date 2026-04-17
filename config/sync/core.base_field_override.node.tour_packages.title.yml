@@ -1,0 +1,18 @@
+uuid: 4eadae8b-fad6-457e-8818-04968d781521
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tour_packages
+id: node.tour_packages.title
+field_name: title
+entity_type: node
+bundle: tour_packages
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

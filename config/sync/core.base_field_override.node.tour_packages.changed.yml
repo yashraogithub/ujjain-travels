@@ -1,0 +1,18 @@
+uuid: ca8eb54d-9981-4ce2-8e66-967e1081af10
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tour_packages
+id: node.tour_packages.changed
+field_name: changed
+entity_type: node
+bundle: tour_packages
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

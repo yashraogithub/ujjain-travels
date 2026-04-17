@@ -1,0 +1,56 @@
+uuid: 154b8a6e-39de-42cf-834a-a448835dbe5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map_section
+    - field.field.block_content.map_section.field_map_description
+    - field.field.block_content.map_section.field_map_iframe
+    - field.field.block_content.map_section.field_map_title
+  module:
+    - text
+id: block_content.map_section.default
+targetEntityType: block_content
+bundle: map_section
+mode: default
+content:
+  field_map_description:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_map_iframe:
+    type: text_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_map_title:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: c67f0e8f-cc82-49f3-8d0d-0dc0fdf74a19
+langcode: hi
+status: true
+dependencies:
+  config:
+    - node.type.tour_package
+id: node.tour_package.status
+field_name: status
+entity_type: node
+bundle: tour_package
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

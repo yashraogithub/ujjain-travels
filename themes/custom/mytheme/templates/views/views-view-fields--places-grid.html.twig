@@ -1,0 +1,21 @@
+<div class="card-inner"
+    data-title="{{ fields.title.content|striptags|trim }}"
+    data-location="{{ fields.field_location.content|striptags|trim }}"
+    data-description="{{ fields.field_fulldesc.content|striptags|trim }}"
+    data-price="{{ fields.field_price.content|striptags|trim }}"
+    data-rating="{{ fields.field_rating.content|striptags|trim }}"
+    data-timing="{{ fields.field_timing.content|striptags|trim }}"
+  {{ fields.field_imagee.content }}
+
+  <div class="place-card-body">
+    <h3>{{ fields.title.content }}</h3>
+    <div class="location">{{ fields.field_location.content }}</div>
+    <p>{{ fields.field_description.content }}</p>
+
+    <div class="place-card-footer">
+      <span class="price">{{ fields.field_price.content }}</span>
+      <span>View Details →</span>
+    </div>
+  </div>
+</div>
+

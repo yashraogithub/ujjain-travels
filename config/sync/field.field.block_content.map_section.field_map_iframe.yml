@@ -1,0 +1,24 @@
+uuid: d662589e-404c-45e4-a387-2177613fb12e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map_section
+    - field.storage.block_content.field_map_iframe
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.map_section.field_map_iframe
+field_name: field_map_iframe
+entity_type: block_content
+bundle: map_section
+label: 'Map Iframe'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

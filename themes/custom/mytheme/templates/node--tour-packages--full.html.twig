@@ -1,0 +1,84 @@
+{# {{ attach_library('mytheme/global-style') }} #}
+{% if node.field_tp_image.entity %}
+  {% set image = node.field_tp_image.entity.uri.value %}
+{% endif %}
+
+<main class="detail-container">
+
+  <div class="content-left">
+
+    <div class="quick-info-grid">
+      <div class="info-box">
+        <p>Duration</p>
+        <h4>{{ node.field_tp_duration.value }}</h4>
+      </div>
+
+      <div class="info-box">
+        <p>Group Size</p>
+        <h4>{{ node.field_tp_group_size.value }}</h4>
+      </div>
+
+      <div class="info-box">
+        <p>Difficulty</p>
+        <h4>{{ node.field_tp_difficulty.value }}</h4>
+      </div>
+
+      <div class="info-box">
+        <p>Best Time</p>
+        <h4>{{ node.field_tp_best_time.value }}</h4>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>About This Tour</h2>
+      {{ content.field_tp_about }}
+    </div>
+
+    <div class="card">
+      <h2>Tour Highlights</h2>
+      {{ content.field_tp_highlights }}
+    </div>
+
+    <div class="card">
+      <h2>Day-wise Itinerary</h2>
+      {{ content.field_tp_itinerary }}
+    </div>
+
+    <div class="inc-exc-container">
+      <div class="inc-box">
+        <h3>Inclusions</h3>
+        {{ content.field_tp_inclusions }}
+      </div>
+
+      <div class="exc-box">
+        <h3>Exclusions</h3>
+        {{ content.field_tp_exclusions }}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content-right">
+
+    <div class="card">
+      <div class="price-row">
+        <span class="price-current">₹{{ node.field_tp_price.value }}</span>
+        <span class="price-old">₹{{ node.field_tp_old_price.value }}</span>
+        <span class="discount-badge">
+          {{ node.field_tp_discount.value }}% OFF
+        </span>
+      </div>
+
+         <a href="https://wa.me/7804025072" target="_blank" class="btn-whatsapp">
+        Book via WhatsApp
+      </a>
+
+   <button class="btn-call" onclick="window.location.href='/contact-us'">
+  Contact Us
+</button>
+    </div>
+
+  </div>
+
+</main>
+

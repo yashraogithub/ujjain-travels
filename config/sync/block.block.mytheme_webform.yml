@@ -1,0 +1,26 @@
+uuid: 7c173b39-447c-413e-bbe7-917fd42f7d6e
+langcode: en
+status: false
+dependencies:
+  config:
+    - webform.webform.quick_booking
+  module:
+    - webform
+  theme:
+    - mytheme
+id: mytheme_webform
+theme: mytheme
+region: header
+weight: -3
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: quick_booking
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }

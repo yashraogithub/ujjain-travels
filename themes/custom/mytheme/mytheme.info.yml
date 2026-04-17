@@ -9,5 +9,17 @@ libraries:
 
 regions:
   header: Header
-  content: Content
-  footer: Footer
+  primary_menu: 'Primary Menu'
+  slider: Slider
+  destination: Destination
+  about: 'About'
+  sacred_temples: 'Sacred Temples'
+  tour_packages: 'Tour Packages'
+  contact_us: 'Contact Us'
+  gallery: 'Gallery'
+  hotels: 'Hotels'
+  why_visit: 'Why Visit'
+  map: 'Map Section'
+  reviews: 'Reviews'
+  content: 'Content'
+  footer: 'Footer'

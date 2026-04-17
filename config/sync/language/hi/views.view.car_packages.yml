@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<section class="section-header"><div class="container"><h2 class="section-title">कार पैकेज</h2><p class="section-subtitle">उज्जैन यात्रा के लिए आरामदायक और भरोसेमंद वाहन चुनें</p><div class="title-divider">&nbsp;</div></div></section>'
+            format: full_html

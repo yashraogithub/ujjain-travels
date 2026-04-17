@@ -1,0 +1,22 @@
+uuid: eec80e77-7f01-4cf8-a375-6efad19dd0c8
+langcode: hi
+status: true
+dependencies:
+  config:
+    - block_content.type.map_section
+id: block_content.map_section.status
+field_name: status
+entity_type: block_content
+bundle: map_section
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

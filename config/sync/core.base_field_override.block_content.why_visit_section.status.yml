@@ -1,0 +1,22 @@
+uuid: 3696ca02-2051-4083-ad54-eed8ea36d7da
+langcode: hi
+status: true
+dependencies:
+  config:
+    - block_content.type.why_visit_section
+id: block_content.why_visit_section.status
+field_name: status
+entity_type: block_content
+bundle: why_visit_section
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

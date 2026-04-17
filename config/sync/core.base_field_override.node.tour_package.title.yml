@@ -1,0 +1,18 @@
+uuid: fabdc47b-3eb3-4a8f-a86c-1b623eaf0048
+langcode: hi
+status: true
+dependencies:
+  config:
+    - node.type.tour_package
+id: node.tour_package.title
+field_name: title
+entity_type: node
+bundle: tour_package
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: 4a3edff3-d00d-45c7-af26-c3b5a47b3ee1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3115f3fb-bf6d-4a89-b290-66c2e20aa382'
+  module:
+    - block_content
+  theme:
+    - mytheme
+id: mytheme_whyvisitus
+theme: mytheme
+region: why_visit
+weight: 0
+provider: null
+plugin: 'block_content:3115f3fb-bf6d-4a89-b290-66c2e20aa382'
+settings:
+  id: 'block_content:3115f3fb-bf6d-4a89-b290-66c2e20aa382'
+  label: 'Why Visit Us '
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

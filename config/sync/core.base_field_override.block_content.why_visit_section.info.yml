@@ -1,0 +1,18 @@
+uuid: 8195f720-849f-45ad-bd9a-da3ed9e30e94
+langcode: hi
+status: true
+dependencies:
+  config:
+    - block_content.type.why_visit_section
+id: block_content.why_visit_section.info
+field_name: info
+entity_type: block_content
+bundle: why_visit_section
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

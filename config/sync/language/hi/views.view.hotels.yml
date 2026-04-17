@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<div class="section-title"><h2>होटल और ठहरने की व्यवस्था</h2><p>महाकाल मंदिर और पवित्र घाटों के पास आरामदायक आवास</p></div>'
+            format: full_html

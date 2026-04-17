@@ -1,0 +1,11 @@
+elements: |
+  name:
+    '#title': 'आपका नाम'
+  your_email:
+    '#title': 'आपका ईमेल'
+  your_phone_number:
+    '#title': 'आपका फोन नंबर'
+  subject:
+    '#title': विषय
+  your_message:
+    '#title': 'आपका संदेश'

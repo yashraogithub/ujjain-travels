@@ -1,0 +1,20 @@
+uuid: 2af65fce-d26b-4122-8733-b6e218de8f17
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.car_package
+  module:
+    - path
+id: node.car_package.path
+field_name: path
+entity_type: node
+bundle: car_package
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

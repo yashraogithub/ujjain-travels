@@ -1,0 +1,25 @@
+uuid: 1b5304f1-76bf-4776-a755-22568ff94d89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tp_difficulty
+    - node.type.tour_packages
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tour_packages.field_tp_difficulty
+field_name: field_tp_difficulty
+entity_type: node
+bundle: tour_packages
+label: Difficulty
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

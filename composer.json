@@ -19,7 +19,13 @@
         "drupal/core-composer-scaffold": "^11.1",
         "drupal/core-project-message": "^11.1",
         "drupal/core-recommended": "^11.1",
-        "drupal/core-vendor-hardening": "^11.1"
+        "drupal/core-vendor-hardening": "^11.1",
+        "drupal/paragraphs": "^1.20",
+        "drupal/tmgmt": "^1.18",
+        "drupal/tmgmt_google": "^1.2",
+        "drupal/twig_tweak": "^3.4",
+        "drupal/webform": "^6.3@beta",
+        "drush/drush": "^13.7"
     },
     "conflict": {
         "drupal/drupal": "*"

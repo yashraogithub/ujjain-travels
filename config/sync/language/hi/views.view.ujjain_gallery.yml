@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<div class="section-title"><h2>उज्जैन गैलरी</h2><p>उज्जैन की दिव्य सुंदरता और आध्यात्मिक वातावरण की झलक</p></div>'
+            format: full_html
